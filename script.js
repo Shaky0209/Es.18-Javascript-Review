@@ -145,14 +145,47 @@
 
 // acronym(string);
 
+
+
+
 // Esercizi extra
 // NOTA: tutti gli esercizi devono essere svolti usando le funzioni
 // 1. Partendo da una stringa (passata come parametro), ritorna il carattere più usato nella stringa stessa.
+
 // 2. Controlla che due stringhe passate come parametri siano gli anagrammi l’una dell’altra. Ignora punteggiatura e spazi e ricordate di rendere la stringa tutta in minuscolo. Se le due parole sono anagrammi, ritorna `true`, altrimenti ritorna `false`.
+
 // 3. Partendo da una lista di possibili anagrammi e da una parola (entrambi passati come parametri), ritorna un nuovo array contenente tutti gli anagrammi corretti della parola data.
 // Per esempio, partendo da “cartine” e [”carenti”, “incerta”, “espatrio”], il valore ritornato deve essere [”carenti”, “incerta”].
+
 // 4. Partendo da una stringa passata come parametro, ritorna `true` se la stringa è palindroma o `false` se non lo è.
+
+// let string = "ingegni";
+
+
+// const isPalindrome = (string)=>{
+//     stringReverse = string.split("");
+//     stringReverse = stringReverse.reverse();
+//     stringReverse = stringReverse.join("");
+//     if(string == stringReverse){
+//         console.log(true);
+//     }else{
+//         console.log(false);
+//     }
+// }
+
+// isPalindrome(string);
+
 // 5. Partendo da un numero intero (dai parametri) ritorna un numero che contenga le stesse cifre, ma in ordine contrario. Es. 189 ⇒ 981
+
+// let number = 2024;
+
+// const numberReverse = (number)=>{
+//     number = Number(number.toString().split("").reverse().join(""));
+//     console.log(number);
+// }
+
+// numberReverse(number);
+
 // 6. Scrivi una funzione che accetti un numero positivo X come parametro. La funzione dovrebbe stampare a console una “scala” creata con il carattere “#” e avente X scalini.
 // Es.
 // X = 2
@@ -162,16 +195,85 @@
 // '# '
 // '## '
 // '###'
+
+// let scaleNumber = 50;
+// let step = "#"
+
+// const makeScale = (scaleNumber)=>{
+//     let output = [];
+//     for(i = scaleNumber; i > 0; i--){
+
+//         if(i < scaleNumber){
+//             output = output.split("")
+//         }
+
+//         output.push(step);
+//         output = output.join("");
+//         console.log(output);
+//     }
+// }
+
+// makeScale(scaleNumber);
+
 // 7. Crea una funzione che, data una stringa come parametro, ritorni la stessa stringa, ma al contrario. Es. “Ciao” ****⇒ “oaiC”
+
+// let string = "pallino";
+
+
+// const stringReverse = (string)=>{
+//     reverse = string.split("").reverse().join("");
+//     console.log(reverse)
+// }
+
+// stringReverse(string);
+
 // 8. Crea una funzione che accetti un array e un numero Y come parametro. Dividi l’array in sotto-array aventi lunghezza Y.
 // Es. array: [1, 2, 3, 4], y: 2 ⇒ [[ 1, 2], [3, 4]]
 // array: [1, 2, 3, 4, 5], y: 4 ⇒ [[ 1, 2, 3, 4], [5]]
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+// let y = 4;
+
+// const arrayPartition = (array)=>{
+//     let tempArray = [];
+//     let outArray = [];
+//     let condition = Math.ceil(array.length /y);
+
+//     for(let i = 0; i < condition; i++){
+//         tempArray = array.splice(0, y);
+//         outArray.push(tempArray);
+//     }
+//     console.log(outArray);
+// }
+
+// arrayPartition(array);
+
 // 9. Scrivi una funzione che accetti un numero positivo X come parametro. La funzione dovrebbe stampare a console una “piramide” create con il carattere “#” e avente X strati.
 // Es.
 // X = 3
 // ' # '
 // ' ### '
 // '#####'
+
+// let layerNumber = 25;
+// let brick = "#"
+
+// const makePyramid = (layerNumber)=>{
+//     let layer = [];
+//     for(i = layerNumber; i > 0; i--){
+
+//         if(i < layerNumber){
+//             layer = layer.split("")
+//         }
+
+//         layer.push(brick);
+//         layer = layer.join("");
+//         console.log(layer);
+//     }
+// }
+
+// makePyramid(layerNumber);
+
 // 10. Scrivi una funzione che accetti un intero N e ritorni una matrice a spirale NxN:
 // Es. N = 2
 // [[1, 2],[4, 3]]
